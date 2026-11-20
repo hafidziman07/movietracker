@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieTracker — Masuk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <h1>🎬 MovieTracker</h1>
+    <p class="muted">Lacak film yang kamu tonton, review, dan watchlist — real-time.</p>
+    <form id="auth-form">
+      <div class="tabs">
+        <button type="button" id="tab-login" class="tab active">Masuk</button>
+        <button type="button" id="tab-register" class="tab">Daftar</button>
+      </div>
+      <div id="reg-fields" style="display:none">
+        <input type="text" id="nama" placeholder="Nama lengkap" autocomplete="name">
+      </div>
+      <input type="email" id="email" placeholder="Email" required autocomplete="email">
+      <input type="password" id="password" placeholder="Password" required minlength="6" autocomplete="current-password">
+      <button type="submit" id="btn-submit" class="btn primary">Masuk</button>
+      <p id="auth-msg" class="msg"></p>
+    </form>
+  </div>
+  <script src="js/config.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>
