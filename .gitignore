@@ -1,0 +1,10 @@
+.env
+.env.local
+node_modules/
+vendor/
+*.bak*
+debug_*.php
+check_*.php
+php_mongodb.dll
+__pycache__/
+.DS_Store
