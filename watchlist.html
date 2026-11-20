@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watchlist — MovieTracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="dashboard.html">🎬 MovieTracker</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="catalog.html">Katalog</a>
+      <a href="watchlist.html" class="active">Watchlist</a>
+      <button id="btn-logout" class="btn ghost">Keluar</button>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="tabs">
+      <button class="tab active" data-status="all">Semua</button>
+      <button class="tab" data-status="plan">Rencana</button>
+      <button class="tab" data-status="watching">Menonton</button>
+      <button class="tab" data-status="completed">Selesai</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p id="info" class="muted"></p>
+  </main>
+  <script src="js/config.js"></script>
+  <script type="module" src="js/pages/watchlist.js"></script>
+</body>
+</html>
