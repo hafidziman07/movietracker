@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Film — MovieTracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">Movie<span class="gold">Tracker</span></div>
+        <div class="brand-sub">Premium Experience</div>
+      </div>
+      <div class="side-label">Navigasi</div>
+      <nav class="side-nav">
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="catalog.html" class="active">🎞️ Katalog Film</a>
+        <a href="watchlist.html">🔖 Daftar Tonton</a>
+      </nav>
+      <div class="side-foot">
+        <div class="conn">● Supabase Tersambung</div>
+        <div class="premium-foot">Premium v2.0 <span style="color:var(--green)">●</span></div>
+      </div>
+    </aside>
+
+    <main class="mainbar">
+      <div class="page-head">
+        <h1>Detail Film</h1>
+        <span class="spacer"></span>
+        <button id="btn-logout" class="btn danger">⎋ Logout</button>
+      </div>
+      <div id="movie-detail" class="detail"></div>
+      <section class="panel" id="review-box" style="display:none">
+        <h2>⭐ Tulis Review</h2>
+        <div class="stars" id="stars">
+          <button data-v="1">★</button><button data-v="2">★</button><button data-v="3">★</button><button data-v="4">★</button><button data-v="5">★</button>
+        </div>
+        <textarea id="komentar" placeholder="Tulis ulasanmu..."></textarea>
+        <button id="btn-review" class="btn dash-btn">Simpan Review</button>
+        <p id="review-msg" class="msg"></p>
+      </section>
+      <p id="login-hint" class="muted" hidden>Untuk memberi review, silakan masuk terlebih dahulu.</p>
+      <section class="panel">
+        <h2>💬 Review Pengguna</h2>
+        <ul id="reviews" class="review-list"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="js/config.js"></script>
+  <script type="module" src="js/pages/movie.js"></script>
+</body>
+</html>
