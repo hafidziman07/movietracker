@@ -7,25 +7,49 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="dashboard.html">🎬 MovieTracker</a>
-    <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="catalog.html">Katalog</a>
-      <a href="watchlist.html" class="active">Watchlist</a>
-      <button id="btn-logout" class="btn ghost">Keluar</button>
-    </nav>
-  </header>
-  <main class="container">
-    <div class="tabs">
-      <button class="tab active" data-status="all">Semua</button>
-      <button class="tab" data-status="plan">Rencana</button>
-      <button class="tab" data-status="watching">Menonton</button>
-      <button class="tab" data-status="completed">Selesai</button>
-    </div>
-    <div class="grid" id="grid"></div>
-    <p id="info" class="muted"></p>
-  </main>
+  <div class="shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">Movie<span class="gold">Tracker</span></div>
+        <div class="brand-sub">Premium Experience</div>
+      </div>
+      <div class="user-card">
+        <div class="avatar" id="sidebar-avatar">W</div>
+        <div><div class="name">Akun Saya</div><div class="mail">Supabase Auth</div></div>
+      </div>
+      <div class="side-label">Navigasi</div>
+      <nav class="side-nav">
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="catalog.html">🎞️ Katalog Film</a>
+        <a href="watchlist.html" class="active">🔖 Daftar Tonton</a>
+      </nav>
+      <div class="side-label">Komunitas</div>
+      <nav class="side-nav">
+        <a href="catalog.html">👥 Shared List</a>
+        <a href="dashboard.html">⭐ Ulasan Saya</a>
+      </nav>
+      <div class="side-foot">
+        <div class="conn">● Supabase Tersambung</div>
+        <div class="premium-foot">Premium v2.0 <span style="color:var(--green)">●</span></div>
+      </div>
+    </aside>
+
+    <main class="mainbar">
+      <div class="page-head">
+        <h1>Daftar Tonton</h1>
+        <span class="spacer"></span>
+        <button id="btn-logout" class="btn danger">⎋ Logout</button>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-status="all">Semua</button>
+        <button class="tab" data-status="plan">Rencana</button>
+        <button class="tab" data-status="watching">Menonton</button>
+        <button class="tab" data-status="completed">Selesai</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p id="info" class="muted" style="margin-top:20px"></p>
+    </main>
+  </div>
   <script src="js/config.js"></script>
   <script type="module" src="js/pages/watchlist.js"></script>
 </body>
