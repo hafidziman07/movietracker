@@ -7,23 +7,55 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="auth-page">
-  <div class="auth-card">
-    <h1>🎬 MovieTracker</h1>
-    <p class="muted">Lacak film yang kamu tonton, review, dan watchlist — real-time.</p>
-    <form id="auth-form">
-      <div class="tabs">
-        <button type="button" id="tab-login" class="tab active">Masuk</button>
-        <button type="button" id="tab-register" class="tab">Daftar</button>
-      </div>
-      <div id="reg-fields" style="display:none">
-        <input type="text" id="nama" placeholder="Nama lengkap" autocomplete="name">
-      </div>
-      <input type="email" id="email" placeholder="Email" required autocomplete="email">
-      <input type="password" id="password" placeholder="Password" required minlength="6" autocomplete="current-password">
-      <button type="submit" id="btn-submit" class="btn primary">Masuk</button>
-      <p id="auth-msg" class="msg"></p>
-    </form>
-  </div>
+  <!-- PANEL KIRI -->
+  <section class="hero-left">
+    <div class="brand">Movie <span class="gold">Tracker</span></div>
+    <h1>Lacak semua film favoritmu di satu <span class="gold">tempat</span></h1>
+    <p class="lede">Buat watchlist, catat progress, tulis review, dan bagikan dengan teman.</p>
+    <ul class="hero-list">
+      <li>🔖 &nbsp;Watchlist &amp; progress tracking</li>
+      <li>🌟 &nbsp;Review dengan rating bintang</li>
+      <li>🔔 &nbsp;Reminder jadwal nonton</li>
+      <li>👥 &nbsp;Shared watchlist bersama teman</li>
+    </ul>
+    <div class="hero-stats">
+      <div><b>120K+</b><span>Aktif moviegoers</span></div>
+      <div><b class="gold">4.8/5</b><span>User satisfaction</span></div>
+    </div>
+    <p class="trending-label">TRENDING THIS WEEK</p>
+    <div class="chips">
+      <div class="chip"><span class="dot" style="background:#e5094f"></span>Dune: Part Two</div>
+      <div class="chip"><span class="dot" style="background:#3b82f6"></span>Oppenheimer</div>
+    </div>
+    <p class="copy-foot">© 2026 MOVIETRACKER · PREMIUM EXPERIENCE</p>
+  </section>
+
+  <!-- PANEL KANAN -->
+  <section class="auth-side">
+    <div class="welcome-card">
+      <h2>WELCOME!</h2>
+      <p class="sub">Masukkan detail akunmu untuk lanjut melacak film.</p>
+      <form id="auth-form">
+        <div id="reg-fields">
+          <input type="text" id="nama" placeholder="Nama lengkap" autocomplete="name">
+        </div>
+        <label class="field-label">Email</label>
+        <div class="input-wrap">
+          <span class="ic">✉️</span>
+          <input type="email" id="email" placeholder="name@email.com" required autocomplete="email">
+        </div>
+        <label class="field-label">Password</label>
+        <div class="input-wrap">
+          <span class="ic">🔒</span>
+          <input type="password" id="password" placeholder="••••••••" required minlength="6" autocomplete="current-password">
+        </div>
+        <button type="submit" id="btn-submit" class="btn primary">Login</button>
+        <p id="auth-msg" class="msg"></p>
+        <p class="switch-line">Belum punya akun? <a id="tab-register" class="link-gold">Register here</a></p>
+      </form>
+    </div>
+  </section>
+
   <script src="js/config.js"></script>
   <script type="module" src="js/pages/auth.js"></script>
 </body>
